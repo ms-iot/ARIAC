@@ -41,7 +41,7 @@
 namespace gazebo
 {
   /// \brief A plugin for a contact sensor on a kit tray.
-  class GAZEBO_VISIBLE KitTrayPlugin : public SideContactPlugin
+  class GZ_PLUGIN_VISIBLE KitTrayPlugin : public SideContactPlugin
   {
     /// \brief Constructor.
     public: KitTrayPlugin();

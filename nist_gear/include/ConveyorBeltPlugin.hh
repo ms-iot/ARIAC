@@ -114,7 +114,7 @@ namespace gazebo
   ///     <power>0</power>
   ///   </plugin>
   /// </model>
-  class GAZEBO_VISIBLE ConveyorBeltPlugin : public ModelPlugin
+  class GZ_PLUGIN_VISIBLE ConveyorBeltPlugin : public ModelPlugin
   {
     /// \brief Constructor.
     public: ConveyorBeltPlugin() = default;

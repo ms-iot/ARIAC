@@ -31,7 +31,7 @@
 namespace gazebo
 {
   /// \brief A Ray Sensor Plugin which makes it act as a proximity sensor
-  class GAZEBO_VISIBLE SensorBlackoutPlugin : public SensorPlugin
+  class GZ_PLUGIN_VISIBLE SensorBlackoutPlugin : public SensorPlugin
   {
     /// \brief Constructor
     public: SensorBlackoutPlugin();

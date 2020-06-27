@@ -5,7 +5,7 @@
 
     <!-- Load robot to param server -->
     <param name="robot_description"
-      command="$(find xacro)/xacro &#x002D;&#x002D;inorder '$(arg gantry_urdf_xacro)'
+      command="$(find xacro)/xacro &#x002D;&#x002D;inorder &quot;$(arg gantry_urdf_xacro)&quot;
       hardware_interface:=EffortJointInterface
       use_effort_interface:=true
       joint_limited:=$(arg limited)"/>

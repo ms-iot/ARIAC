@@ -39,7 +39,7 @@ namespace gazebo
   ///
   ///    </plugin>
   /// \endverbatim
-  class GAZEBO_VISIBLE ToggleVisualPlugin : public VisualPlugin
+  class GZ_PLUGIN_VISIBLE ToggleVisualPlugin : public VisualPlugin
   {
     /// \brief Constructor.
     public: ToggleVisualPlugin();

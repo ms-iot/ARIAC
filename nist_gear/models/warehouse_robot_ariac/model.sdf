@@ -19,7 +19,7 @@
       <visual name="visual">
         <geometry>
           <mesh>
-            <uri>model://warehouse_robot/meshes/robot.dae</uri>
+            <uri>model://warehouse_robot_ariac/meshes/robot.dae</uri>
           </mesh>
         </geometry>
       </visual>

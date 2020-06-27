@@ -79,7 +79,7 @@ namespace gazebo
   ///   </object_sequence>
   /// </plugin>
 
-  class GAZEBO_VISIBLE PopulationPlugin : public WorldPlugin
+  class GZ_PLUGIN_VISIBLE PopulationPlugin : public WorldPlugin
   {
     /// \brief Constructor.
     public: PopulationPlugin();

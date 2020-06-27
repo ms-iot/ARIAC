@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(nist_gear)
 
-# This package was developed with gazebo7, but now uses gazebo8.
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated-declarations")
-
 if(NOT WIN32)
+  # This package was developed with gazebo7, but now uses gazebo8.
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated-declarations")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Wextra")
 endif()
 
@@ -166,7 +165,7 @@ install(TARGETS ${side_contact_plugin_name}
 # Create the libROSAGVPlugin.so library.
 set(ros_agv_plugin_name ROSAGVPlugin)
 add_library(${ros_agv_plugin_name} src/ROSAGVPlugin.cc)
-target_link_libraries(${ros_agv_plugin_name} ${GAZEBO_LIBRARIES})
+target_link_libraries(${ros_agv_plugin_name} ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
 add_dependencies(${ros_agv_plugin_name}
   ${${PROJECT_NAME}_EXPORTED_TARGETS}
 )
@@ -179,7 +178,7 @@ install(TARGETS ${ros_agv_plugin_name}
 # Create the libROSPersonPlugin.so library.
 set(ros_person_plugin_name ROSPersonPlugin)
 add_library(${ros_person_plugin_name} src/ROSPersonPlugin.cc)
-target_link_libraries(${ros_person_plugin_name} ${GAZEBO_LIBRARIES})
+target_link_libraries(${ros_person_plugin_name} ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
 add_dependencies(${ros_person_plugin_name}
   ${${PROJECT_NAME}_EXPORTED_TARGETS}
 )
@@ -208,6 +207,7 @@ add_library(${ros_conveyor_belt_plugin_name} src/ROSConveyorBeltPlugin.cc)
 target_link_libraries(${ros_conveyor_belt_plugin_name}
   ${conveyor_belt_plugin_name}
   ${GAZEBO_LIBRARIES}
+  ${catkin_LIBRARIES}
 )
 add_dependencies(${ros_conveyor_belt_plugin_name}
   ${${PROJECT_NAME}_EXPORTED_TARGETS}
@@ -251,6 +251,7 @@ add_library(${ros_proximity_ray_plugin_name} src/ROSProximityRayPlugin.cc)
 target_link_libraries(${ros_proximity_ray_plugin_name}
   ${proximity_ray_plugin_name}
   ${GAZEBO_LIBRARIES}
+  ${catkin_LIBRARIES}
 )
 add_dependencies(${ros_proximity_ray_plugin_name}
   ${${PROJECT_NAME}_EXPORTED_TARGETS}
@@ -362,6 +363,7 @@ add_library(${kit_tray_plugin_name} src/ROSAriacKitTrayPlugin.cc)
 target_link_libraries(${kit_tray_plugin_name}
   ${GAZEBO_LIBRARIES}
   ${roscpp_LIBRARIES}
+  ${catkin_LIBRARIES}
   ${side_contact_plugin_name}
 )
 add_dependencies(${kit_tray_plugin_name}

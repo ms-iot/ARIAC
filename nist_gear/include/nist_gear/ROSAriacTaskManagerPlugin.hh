@@ -107,7 +107,7 @@ namespace gazebo
   /// order.
   ///
   /// In "finish" state there's nothing to do.
-  class GAZEBO_VISIBLE ROSAriacTaskManagerPlugin : public WorldPlugin
+  class GZ_PLUGIN_VISIBLE ROSAriacTaskManagerPlugin : public WorldPlugin
   {
     /// \brief Constructor.
     public: ROSAriacTaskManagerPlugin();

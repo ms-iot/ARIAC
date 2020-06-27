@@ -32,7 +32,7 @@ namespace gazebo
   class VacuumGripperPluginPrivate;
 
   /// \brief
-  class GAZEBO_VISIBLE VacuumGripperPlugin : public ModelPlugin
+  class GZ_PLUGIN_VISIBLE VacuumGripperPlugin : public ModelPlugin
   {
     /// \brief Constructor
     public: explicit VacuumGripperPlugin();

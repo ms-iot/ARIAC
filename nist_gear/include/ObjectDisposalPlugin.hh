@@ -31,7 +31,7 @@
 namespace gazebo
 {
   /// \brief A plugin for a contact sensor attached to a model disposal unit.
-  class GAZEBO_VISIBLE ObjectDisposalPlugin : public SideContactPlugin
+  class GZ_PLUGIN_VISIBLE ObjectDisposalPlugin : public SideContactPlugin
   {
     /// \brief Constructor.
     public: ObjectDisposalPlugin();

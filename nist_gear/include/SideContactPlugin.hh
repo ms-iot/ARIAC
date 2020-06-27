@@ -34,7 +34,7 @@ namespace gazebo
 {
   /// \brief A plugin for a model with a contact sensor that only monitors
   /// collisions on one of its sides.
-  class GAZEBO_VISIBLE SideContactPlugin : public ModelPlugin
+  class GZ_PLUGIN_VISIBLE SideContactPlugin : public ModelPlugin
   {
     /// \brief Constructor.
     public: SideContactPlugin();
